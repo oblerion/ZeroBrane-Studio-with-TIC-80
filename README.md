@@ -6,6 +6,12 @@ need update for tic80 ver 1.x .
 # install
 ## 1. copy folders to zb path
 ## 2. add this to zb config file (`Edit > Preferences`)
+### on window
 ```lua
-path.tic80 = "tic80 path"
+path.tic80 = "C:/Program Files (x86)/Tic80/tic80.exe"
+```
+
+### on linux
+```lua
+path.tic80 = "/usr/bin/tic80"
 ```
