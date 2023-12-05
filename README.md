@@ -4,3 +4,5 @@ it's made for ver 0.80 of tic80,
 need update for tic80 ver 1.x .
 
 # install
+## on config file zb
+path.tic80 = "tic80 path"
