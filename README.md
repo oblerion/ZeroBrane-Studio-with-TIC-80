@@ -13,3 +13,4 @@ path.tic80 = "C:/Program Files (x86)/Tic80/tic80.exe"
 ```lua
 path.tic80 = "/usr/bin/tic80"
 ```
+save/restart zb 
