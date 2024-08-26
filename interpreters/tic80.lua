@@ -11,15 +11,14 @@ local srcext = "lua"
 
 
 local function locateexe()
-  -- TODO: look up the executable (see love2d.lua and others)
   local lpath
   if ide.config.path.tic80~=nil then
     lpath = ide.config.path.tic80
   elseif win then
     lpath = "C:/Program Files (x86)/Tic80/tic80.exe"
   elseif mac then
-    
-  else
+    -- need edit by mac user
+  else -- linux user
     lpath = "/usr/bin/tic80"
   end
   return lpath
@@ -29,8 +28,10 @@ end
 local function locatecart(wfilename)--, args)
   local fullpath = wfilename:GetFullPath()
   local scart=fullpath
+-- reverse search of .
   for i=fullpath:len(),1,-1 do
     if fullpath[i]=='.' then
+    -- remove 3 char and add .tic
       local path1 = fullpath:sub(1,fullpath:len()-3)
       scart = path1..".tic"
       break
@@ -61,7 +62,7 @@ return {
     if not code then
       ide:Print("No source file specified. The code from the cart will run. To use a source file open it in the editor, or add `-code /path/to/file.lua` in `Project > Command Line Parameters...`")
     end
-    
+        
     local cmd = string.format(tic80.." "..cart.." --cmd="..'"'.."import code %s"..'"',code)
     return CommandLineRun(cmd,self:fworkdir(wfilename),true,true,nil,nil,nil)
   end,
