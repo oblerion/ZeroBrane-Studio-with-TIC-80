@@ -1,6 +1,9 @@
 -- file: api/lua/tic80.lua
--- TIC-80 API for ZBStudio
 -- see [TIC-80 wiki](https://github.com/nesbox/TIC-80/wiki/)
+--[[--
+    TIC-80 API for ZBStudio
+    Original writer : librorumque 2019
+--]]--
 
 local API = {
   -- Special functions
