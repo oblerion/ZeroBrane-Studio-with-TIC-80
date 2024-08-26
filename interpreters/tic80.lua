@@ -3,6 +3,8 @@
     TIC-80 Interpreter for ZBStudio
     @see [TIC-80 wiki](https://github.com/nesbox/TIC-80/wiki/)
     Version 1.0
+    Original writer : librorumque 2019
+    Update and opti : oblerion 2024
 --]]--
 local win = ide.osname == "Windows"
 local mac = ide.osname == "Macintosh"
