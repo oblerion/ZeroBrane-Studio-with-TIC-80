@@ -2,9 +2,6 @@
 Recover from https://gist.github.com/oblerion/0d567a202ad6141ae2dbcecae769e281<br>
 I am not the original writter of 2 script, thanks to librorumque for made it.<br>
 
-Interpreter -> tic80 1.1+<br>
-Api -> tic80 0.80
-
 # Install
 ## 1. copy folders to zb path
 ## 2. if no tic80 path are set
