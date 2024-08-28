@@ -6,6 +6,7 @@
     Original writer : librorumque 2019
     Update and opti : oblerion 2024
 --]]--
+-- !!! zb function need to be call inside frun function !!!
 local win = ide.osname == "Windows"
 local mac = ide.osname == "Macintosh"
 local cartext = "tic"
