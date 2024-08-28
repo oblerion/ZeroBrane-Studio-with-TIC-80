@@ -20,7 +20,7 @@ interpreter = {
   frun=function(self,wfilename)
     local luapath = wfilename:GetFullPath()
     local tic80 = nil--= locateexe()
-    local cart = luapath:GetFullPath():sub(1,luapath:len()-4)..".tic"
+    local cart = luapath:sub(1,luapath:len()-4)..".tic"
     local code = luapath
 --  set or default tic80 path
     if ide.config.path.tic80~=nil then
