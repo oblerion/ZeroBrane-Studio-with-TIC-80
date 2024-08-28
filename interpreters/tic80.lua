@@ -29,16 +29,15 @@ end
 
 local function locatecart(wfilename)--, args)
   local fullpath = wfilename:GetFullPath()
-  local scart=fullpath
+  local scart=fullpath:sub(1,fullpath:len()-3)..".tic"
 -- reverse search of .
-  for i=fullpath:len(),1,-1 do
-    if fullpath[i]=='.' then
+ -- for i=fullpath:len(),1,-1 do
+ --   if fullpath[i]=='.' then
     -- remove 3 char and add .tic
-      local path1 = fullpath:sub(1,fullpath:len()-3)
-      scart = path1..".tic"
-      break
-    end
-  end
+      --scart = path1..".tic"
+      --break
+    --end
+  --end
   return scart
 end
 
