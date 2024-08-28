@@ -27,17 +27,8 @@ local function locateexe()
 end
 
 
-local function locatecart(wfilename)--, args)
-  local fullpath = wfilename:GetFullPath()
-  local scart=fullpath:sub(1,fullpath:len()-3)..".tic"
--- reverse search of .
- -- for i=fullpath:len(),1,-1 do
- --   if fullpath[i]=='.' then
-    -- remove 3 char and add .tic
-      --scart = path1..".tic"
-      --break
-    --end
-  --end
+local function locatecart(path)--, args)
+  local scart=path:sub(1,path:len()-4)..".tic"
   return scart
 end
 
@@ -49,7 +40,7 @@ return {
   luaversion="5.3",
   frun=function(self,wfilename)
     local tic80 = locateexe()
-    local cart = locatecart(wfilename)
+    local cart = locatecart(wfilename:GetFullPath())
     local code = wfilename:GetFullPath()
     
     if not tic80 then
