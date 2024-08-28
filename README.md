@@ -1,6 +1,6 @@
 # Note
 Recover from https://gist.github.com/oblerion/0d567a202ad6141ae2dbcecae769e281<br>
-I am not the original writter of 2 script, thanks to librorumque for made it.<br>
+Thanks to librorumque for start it.<br>
 
 # Install
 ## 1. copy packages folder to zb path
