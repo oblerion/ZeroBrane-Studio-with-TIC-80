@@ -13,7 +13,7 @@ local name = 'TIC-80'
     Update and opti : oblerion 2024
 --]]--
 interpreter = {
-  name="TIC-80",
+  name=name,
   description="TIC-80 is a tiny computer which you can use to make, play, and share tiny games.",
   api={name},
   luaversion="5.3",
@@ -408,7 +408,7 @@ for item, def in pairs(lua) do
 end
 -- package TIC-80
 return {
-  name = "TIC-80",
+  name = name,
   description = "Implements integration with TIC80.",
   author = "librorumque, oblerion, atesin",
   version = 0.01,
