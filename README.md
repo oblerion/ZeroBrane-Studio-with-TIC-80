@@ -20,3 +20,10 @@ path.tic80 = "C:/Program Files (x86)/Tic80/tic80.exe"
 path.tic80 = "/usr/bin/tic80"
 ```
 save/restart zb 
+
+# tic80 .lua project to .tic
+In CLI tic80 can load .lua and save .tic . Without start gui.
+```sh
+tic80 load test.lua --cli --cmd="save test.tic"
+```
+tic80 can create it but if early exist that not work.
