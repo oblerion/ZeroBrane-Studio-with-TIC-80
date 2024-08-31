@@ -45,7 +45,7 @@ interpreter = {
       ide:Print("No source file specified. The code from the cart will run. To use a source file open it in the editor, or add `-code /path/to/file.lua` in `Project > Command Line Parameters...`")
     end
         
-    local cmd = string.format(tic80.." "..cart.." --cmd="..'"'.."import code %s"..'"',code)
+    local cmd = string.format(tic80.." --cmd="..'"'.."load "..cart.."& import code %s"..'"',code)
     return CommandLineRun(cmd,self:fworkdir(wfilename),true,true,nil,nil,nil)
   end,
   skipcompile = true,
