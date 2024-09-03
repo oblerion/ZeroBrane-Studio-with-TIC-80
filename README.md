@@ -21,6 +21,11 @@ path.tic80 = "/usr/bin/tic80"
 ```
 save/restart zb 
 
+# Interpreters
+- (TIC-80_LUA) run lua only
+- (TIC-80_TIC) import code lua to .tic and run it
+
+
 # tic80 .lua project to .tic
 In CLI tic80 can load .lua and save .tic . Without start gui.
 ```sh
