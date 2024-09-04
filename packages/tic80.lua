@@ -1,7 +1,5 @@
 local win = ide.osname == "Windows"
 local mac = ide.osname == "Macintosh"
---local api = {}
---local interpreter = {}
 local name = "TIC-80"
 
 -- file: interpreters/tic80.lua
@@ -30,7 +28,7 @@ local interpreter_debug = {
   luaversion="5.3",
   frun=function(self,wfilename)
     local luapath = pathremover(wfilename:GetFullPath())
-    local tic80 = nil--= locateexe()
+    local tic80 = nil
     local cart = luapath:sub(1,luapath:len()-4)..".tic"
     local code = luapath
 --  set or default tic80 path
@@ -56,8 +54,7 @@ local interpreter_debug = {
       ide:Print("No source file specified. The code from the cart will run. To use a source file open it in the editor, or add `-code /path/to/file.lua` in `Project > Command Line Parameters...`")
     end
         
-    local cmd = string.format("%s --skip --cmd=%sload %s & run %s",tic80,'"',code,'"')
-    --string.format("%s --skip --cmd=%sload %s & import code %s & run %s",tic80,'"',cart,code,'"')
+    local cmd = string.format('%s --skip --cmd="load %s & save & run "',tic80,code)
     return CommandLineRun(cmd,self:fworkdir(wfilename),true,true,nil,nil,nil)
   end,
   skipcompile = true,
@@ -72,7 +69,7 @@ local interpreter_release = {
   luaversion="5.3",
   frun=function(self,wfilename)
     local luapath = pathremover(wfilename:GetFullPath())
-    local tic80 = nil--= locateexe()
+    local tic80 = nil
     local cart = luapath:sub(1,luapath:len()-4)..".tic"
     local code = luapath
 --  set or default tic80 path
@@ -98,7 +95,7 @@ local interpreter_release = {
       ide:Print("No source file specified. The code from the cart will run. To use a source file open it in the editor, or add `-code /path/to/file.lua` in `Project > Command Line Parameters...`")
     end
    
-    local cmd = string.format("%s --skip --cmd=%sload %s & save %s & load %s & run %s",tic80,'"',code,cart,cart,'"')
+    local cmd = string.format('%s --skip --cmd="load %s & save %s & load %s & run "',tic80,code,cart,cart)
     return CommandLineRun(cmd,self:fworkdir(wfilename),true,true,nil,nil,nil)
   end,
   skipcompile = true,
