@@ -9,7 +9,7 @@ Thanks to librorumque for start it.<br>
 - win :  "C:/Program Files (x86)/Tic80/tic80.exe"
 - linux : "/usr/bin/tic80"
 - macos : need to set
-## 2. set path (`Edit > Preferences`> User config)
+## 2. set path (Edit > Preferences > User config)
 ### on window
 ```lua
 path.tic80 = "C:/Program Files (x86)/Tic80/tic80.exe"
@@ -25,9 +25,8 @@ save/restart zb
 - (TIC-80_LUA) run lua only
 - (TIC-80_TIC) import code lua to .tic and run it
 
-# Tic80 .lua project to .tic
-In CLI tic80 can load .lua and save .tic . Without start gui.
-```sh
-tic80 --cli --cmd="load test.lua & save test.tic"
-```
-tic80 can create it but if early exist that not work.
+## How do you use it
+- select TIC-80_LUA : Project > Lua Interpreter > TIC-80_LUA
+- select TIC-80_TIC : Project > Lua Interpreter > TIC-80_TIC<br><br>
+  Open your lua file and shortcut(F6) start interpreter,<br>
+  (shift+F5) or (close tic80 window) for stop it.
